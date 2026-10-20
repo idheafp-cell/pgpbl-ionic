@@ -1,0 +1,13 @@
+import { Service } from '@angular/core';
+import { ref, push, onValue, remove, get, update } from
+'firebase/database';
+import { database } from './firebase.service';
+
+@Service()
+export class DataService {
+  // Save a new point
+savePoint(point: { name: string, coordinates: string, description: string }) {
+const pointsRef = ref(database, 'points');
+return push(pointsRef, point);
+}
+}

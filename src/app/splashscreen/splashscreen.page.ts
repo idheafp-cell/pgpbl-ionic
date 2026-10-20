@@ -11,6 +11,9 @@ export class SplashscreenPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    setTimeout(() => {
+      window.location.href = 'login';
+    }, 2000);
   }
 
 }
